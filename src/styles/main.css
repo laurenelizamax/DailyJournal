@@ -1,0 +1,49 @@
+/*page header*/
+h1 {
+ text-align: center;
+ margin-top: 1em;
+ color: whitesmoke;
+ font-size: 60px;
+}
+/* body of page*/
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  /* background-image: url("../images/ocean.jpg"); */
+  background-color: rgb(2,0,36);
+background:  linear-gradient(90deg, rgb(32, 25, 155) 0%, rgb(27, 27, 138) 42%, rgba(4,112,189,1) 76%, rgba(0,212,255,1) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 100%;
+  height: auto;
+}
+/* elements on page*/
+form {
+  display: flex;
+  flex-direction: column;
+  border: white rounded 2px;
+  border-radius: 25px;
+  padding:20px;
+  font-size: 15px;
+  background-color: white;
+  opacity: 0.7;
+  font-weight: bold;
+  width: 70%;
+  height: auto;
+}
+/*add entry button*/
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 300px;
+  font-size: 15px;
+  width: 20%;
+}
+.body_page {
+  display: flex;
+  justify-content: center;
+}
+.entryLog {
+  color: white;
+}

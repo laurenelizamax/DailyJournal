@@ -1,0 +1,25 @@
+{
+    "entries": [
+        {
+            "id": "1",
+            "date": "August 14th",
+            "concepts": "html",
+            "entry": "learned about basic html and where to put content",
+            "mood": "joy"
+        },
+        {
+            "id": "2",
+            "date": "August 15th",
+            "concepts": "css and flexbox",
+            "entry": "learned about css and flexbox",
+            "mood": "happy"
+        },
+        {
+            "id": "3",
+            "date": "August 27th",
+            "concepts": "javascript",
+            "entry": "javascript is really hard. Never seems to do what I want.",
+            "mood": "frustrated"
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+   <meta charset=UTF-8>
+   <meta http-equiv=X-UA-Compatible content=ie=edge>
+   <link rel="stylesheet" href="styles/main.css"> 
+   <title>Journal</title>
+</head>
+<main>
+   <h1>Journal</h1>
+
+   <body>
+      <div class="body_page">
+         <form class="flex-form" action="">
+            <fieldset>
+               <h2>
+                  <label class="entryDate" for="journalDate">Date of Entry:</label>
+                  <input type="date" name="journalDate" id="journalDate"></h2>
+            </fieldset>
+            <fieldset>
+               <h2>
+                  <label class="conceptsCovered" for="conceptsCovered">Concepts Covered:</label>
+                  <input type="text" name="concepts" id="Concepts">
+               </h2>
+            </fieldset>
+            <fieldset>
+               <h2>
+                  <label class="journalEntry" for="journalEntry">Journal Entry:</label>
+                  <textarea rows="4" cols="50"></textarea> </h2>
+            </fieldset>
+            <fieldset>
+               <h2>
+                  <label class="mood" for="mood">Mood for the Day:</label>
+                  <select>
+                     <option value="happy">Happy</option>
+                     <option value="frustrated">Frustrated</option>
+                     <option value="confused">Confused</option>
+                     <option value="joy">Joy</option>
+                     <option value="excited">Excited</option>
+                     <option value="indifferent">Indifferent</option>
+                     <option value="drained">Drained</option>
+                  </select>
+               </h2>
+
+            </fieldset>
+            <div class="button">
+               <button type="button">
+                  <h2>Add Entry</h2>
+               </button>
+            </div>
+         </form>
+      </div>
+      <article class="entryLog"></article>
+      <script src="script/data.js"></script>
+      <script src="script/entriesDOM.js"></script>
+      <script src="script/entryComponent.js"></script>
+      <script src="script/journal.js"></script>
+
+   </body>
+</main>
+
+</html>
