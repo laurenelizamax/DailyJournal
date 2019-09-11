@@ -1,6 +1,5 @@
 
 import API from "./data.js";
-import makeJournal from "./entryComponent.js";
+import renderJournalEntries from "./entriesDOM";
 
 API.getJournalEntries().then(renderJournalEntries)
-

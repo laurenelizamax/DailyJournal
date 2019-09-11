@@ -1,6 +1,4 @@
-import renderJournalEntries from "./entriesDOM.js"
-
-const makeJournal= (journalEntries) => {
+const makeJournal = (journalEntries) => {
     return `
  <p>Date of Entry: ${journalEntries.date}</p>
  <p>Concepts Covered: ${journalEntries.concepts}</p>
