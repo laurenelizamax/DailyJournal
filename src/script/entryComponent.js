@@ -1,3 +1,5 @@
+import renderJournalEntries from "./entriesDOM.js"
+
 const makeJournal= (journalEntries) => {
     return `
  <p>Date of Entry: ${journalEntries.date}</p>
@@ -6,4 +8,6 @@ const makeJournal= (journalEntries) => {
  <p>Mood: ${journalEntries.mood}</p>
  `
  }
- const allEntries = Object.create(makeJournal);
+//  const allEntries = Object.create(makeJournal);
+
+ export default makeJournal;

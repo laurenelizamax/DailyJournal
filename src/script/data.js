@@ -10,3 +10,4 @@
 //     .then(parsedEntries => {
 //        renderJournalEntries(parsedEntries)
 //    })
+export default API;
