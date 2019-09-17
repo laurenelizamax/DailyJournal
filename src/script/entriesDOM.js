@@ -1,13 +1,12 @@
 import makeJournal from "./entryComponent.js";
 
-    let dailyJournal = document.querySelector(".entryLog");
+/* function to put entries on the DOM*/
+const renderJournalEntries = (entries) => {
+  let dailyJournal = document.querySelector(".entryLog");
+  for (let i = 0; i < entries.length; i++) {
+    const journalEntry = entries[i];
+    dailyJournal.innerHTML += makeJournal(journalEntry);
+  }
+}
 
-  const renderJournalEntries = (entries) => {
-   for (let i = 0; i < entries.length; i++) {
-      const journalEntry = entries[i];
-     dailyJournal.innerHTML += makeJournal(journalEntry);
-   }
- }
-//  const journalAll = Object.create(renderJournalEntries);
-
- export default renderJournalEntries;
+export default renderJournalEntries;

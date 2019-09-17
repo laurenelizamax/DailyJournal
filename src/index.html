@@ -4,7 +4,7 @@
 <head>
    <meta charset=UTF-8>
    <meta http-equiv=X-UA-Compatible content=ie=edge>
-   <link rel="stylesheet" href="styles/main.css"> 
+   <link rel="stylesheet" href="styles/main.css">
    <title>Journal</title>
 </head>
 <main>
@@ -12,27 +12,31 @@
 
    <body>
       <div class="body_page">
-         <form class="flex-form" action="">
+         <form class="flex-form" id="formSet" action="">
             <fieldset>
                <h2>
+                  <!--journal entry date-->
                   <label class="entryDate" for="journalDate">Date of Entry:</label>
                   <input type="date" name="journalDate" id="journalDate"></h2>
             </fieldset>
             <fieldset>
                <h2>
-                  <label class="conceptsCovered" for="conceptsCovered">Concepts Covered:</label>
-                  <input type="text" name="concepts" id="Concepts">
+                  <!--journal entry concepts covered-->
+                  <label class="journalConcepts" for="journalConcepts">Concepts Covered:</label>
+                  <input type="text" name="journalConcepts" id="journalConcepts">
                </h2>
             </fieldset>
             <fieldset>
                <h2>
+                  <!--journal entry content-->
                   <label class="journalEntry" for="journalEntry">Journal Entry:</label>
-                  <textarea rows="4" cols="50"></textarea> </h2>
+                  <input id="journalEntry"></h2>
             </fieldset>
             <fieldset>
                <h2>
-                  <label class="mood" for="mood">Mood for the Day:</label>
-                  <select>
+                  <!--journal entry mood drop down -->
+                  <label class="journalMood" name="journalMood" for="mood">Mood for the Day:</label>
+                  <select id="journalMood">
                      <option value="happy">Happy</option>
                      <option value="frustrated">Frustrated</option>
                      <option value="confused">Confused</option>
@@ -44,18 +48,21 @@
                </h2>
 
             </fieldset>
-            <div class="button">
+            <!--add entry button-->
+            <div id="buttonAddEntry">
                <button type="button">
                   <h2>Add Entry</h2>
                </button>
             </div>
          </form>
       </div>
-      <article class="entryLog"></article>
-      <!-- <script src="script/data.js"></script> -->
-      <!-- <script src="script/entriesDOM.js"></script> -->
-      <!-- <script src="script/entryComponent.js"></script> -->
-      <script src="../src/script/journal.js"></script>
+      <!--id entry log for placing JS on the DOM-->
+      <article id="entryLog" class="entryLog"></article>
+      <div id="deleteButton"></div>
+      <!--delete button-->
+      <div id="editButton"></div>
+      <!--edit button-->
+      <script type="module" src="script/journal.js"></script>
 
    </body>
 </main>
