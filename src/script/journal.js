@@ -1,12 +1,13 @@
 
 import API from "./journalAPI.js";
-import renderJournalEntries from "./entriesDOM.js";
+import entriesDOM from "./entriesDOM.js";
 
 /* API call to display entries on the DOM */
 API.getJournalEntries()
     .then(entry => {
-        renderJournalEntries(entry)
+       entriesDOM. renderJournalEntries(entry)
     });
+    
    /* function that query selects and declares  ids for journal entry components and returns them*/
     function createJournalEntry () {
     let dateInput = document.querySelector("#journalDate").value;
@@ -15,10 +16,10 @@ API.getJournalEntries()
     let moodInput = document.querySelector("#journalMood").value;
 
     return {
-        "date": dateInput,
-        "concepts": conceptInput,
-        "entry": entryInput,
-        "mood": moodInput
+        date: dateInput,
+        concepts: conceptInput,
+        entry: entryInput,
+        mood: moodInput
     };
 }
 /* event listener for add entry button */
@@ -32,8 +33,21 @@ API.createEntry(createJournalEntry())
         document.querySelector(".entryLog").innerHTML = "";
         API.getJournalEntries()
             .then(entry => {
-                renderJournalEntries(entry)
+                entriesDom.renderJournalEntries(entry)
             });
        })
 })
 
+const moodArray = document.getElementsByName("moods");
+
+moodArray.forEach(radioButton => {
+    radioButton.addEventListener("click", event => {
+        // event.target.value gets value of moods
+        const moodName = event.target.value;
+        API.getJournalEntries()
+         .then(data => {
+           entriesDOM.moodFilter(data, moodName);
+           
+            });
+        })
+    }) 
