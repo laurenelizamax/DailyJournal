@@ -1,3 +1,17 @@
+@import"./button.css";
+@import"./form.css";
+
+:root {
+  --button-font-color: rgb(255, 255, 255);
+  --button-bg: white;
+  --dark-gold: rgb(223, 186, 1);
+  --bright-gold: rgb(243, 197, 0);
+  --dark-red: rgb(223, 54, 46);
+  --bright-red: rgb(255, 65, 55);
+  --dark-blue: rgb(0, 104, 194);
+  --bright-blue: rgb(0, 116, 218);
+}
+
 /*page header*/
 h1 {
  text-align: center;
@@ -38,10 +52,10 @@ h2 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight:  lighter;
 }
-/*add entry button*/
+/* add entry button */
 #buttonAddEntry {
   display: flex;
-  flex-direction: row;
+  flex-direction: row;/
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 15px;

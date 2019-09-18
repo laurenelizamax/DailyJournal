@@ -37,23 +37,49 @@
                   <!--journal entry mood drop down -->
                   <label class="journalMood" name="journalMood" for="mood">Mood for the Day:</label>
                   <select id="journalMood">
-                     <option value="happy">Happy</option>
-                     <option value="frustrated">Frustrated</option>
-                     <option value="confused">Confused</option>
-                     <option value="joy">Joy</option>
-                     <option value="excited">Excited</option>
-                     <option value="indifferent">Indifferent</option>
-                     <option value="drained">Drained</option>
+                     <option value="happy">happy</option>
+                     <option value="frustrated">frustrated</option>
+                     <option value="confused">confused</option>
+                     <option value="excited">excited</option>
+                     <option value="indifferent">indifferent</option>
                   </select>
                </h2>
 
             </fieldset>
             <!--add entry button-->
-            <div id="buttonAddEntry">
-               <button type="button">
-                  <h2>Add Entry</h2>
+            <div>
+               <button type="button" class="btn" id="buttonAddEntry">
+                  <p>Add Entry</p>
                </button>
             </div>
+         </form>
+         <form>
+            <fieldset>
+         <form> <!--Filter moods Radio Button-->
+               <legend id="filterMoods">Filter by Moods</legend>
+               <div>
+               <label for="contactChoice1">frustrated</label>
+              <input type="radio" id="moodChoice1"
+               name="moods" value="frustrated">
+             <label for="contactChoice2">confused</label>
+              <input type="radio" id="moodChoice2"
+               name="moods" value="confused">
+               <label for="contactChoice3">happy</label>
+              <input type="radio" id="moodChoice3"
+               name="moods" value="happy">
+               <label for="contactChoice4">excited</label>
+              <input type="radio" id="moodChoice4"
+               name="moods" value="excited">
+               <label for="contactChoice5">indifferent</label>
+              <input type="radio" id="moodChoice5"
+               name="moods" value="indifferent">
+              
+            </div>
+            <div>
+              <!-- <button id="moodFilterBtn" type="submit">Submit</button> -->
+            </div>
+          </form>
+            </fieldset>
          </form>
       </div>
       <!--id entry log for placing JS on the DOM-->

@@ -5,7 +5,7 @@
       "date": "August 14th",
       "concepts": "html",
       "entry": "learned about basic html and where to put content",
-      "mood": "joy"
+      "mood": "happy"
     },
     {
       "id": "2",
@@ -34,6 +34,20 @@
       "entry": "commenting code is very important and helpful",
       "mood": "indifferent",
       "id": "X-e4a6T"
+    },
+    {
+      "date": "2019-09-17",
+      "concepts": "does this work",
+      "entry": "work?",
+      "mood": "happy",
+      "id": "cAAa7Ba"
+    },
+    {
+      "date": "2019-09-17",
+      "concepts": "it does work",
+      "entry": "yes!",
+      "mood": "happy",
+      "id": "1yfPlmd"
     }
   ]
 }
