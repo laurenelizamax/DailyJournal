@@ -11,7 +11,7 @@
    <h1>Journal</h1>
 
    <body>
-      <div class="body_page">
+      <div id="journalEntryInput">
          <form class="flex-form" id="formSet" action="">
             <fieldset>
                <h2>
@@ -46,16 +46,18 @@
                </h2>
 
             </fieldset>
+
             <!--add entry button-->
             <div>
                <button type="button" class="btn" id="buttonAddEntry">
                   <p>Add Entry</p>
                </button>
             </div>
+         </div>
          </form>
-         <form>
-            <fieldset>
+
          <form> <!--Filter moods Radio Button-->
+            <fieldset>
                <legend id="filterMoods">Filter by Moods</legend>
                <div>
                <label for="contactChoice1">frustrated</label>
@@ -73,21 +75,46 @@
                <label for="contactChoice5">indifferent</label>
               <input type="radio" id="moodChoice5"
                name="moods" value="indifferent">
-              
+                  <div id="moodBtnDiv">
+              <!-- <button id="moodFilterBtn" type="button">Filter Moods</button> -->
             </div>
-            <div>
-              <!-- <button id="moodFilterBtn" type="submit">Submit</button> -->
             </div>
-          </form>
-            </fieldset>
+         </fieldset>
          </form>
-      </div>
+
+     <!--Edit form for journal entries - hidden -->
+
+<section id="entryForm">
+    <form>
+         <input type="hidden" name="editEntriesHidden" id="editEntriesHidden">
+        <fieldset class="fieldset">
+            <label for="editJournalDate">Date Of Entry:</label>
+            <input type="date" name="editJournalDate" id="editJournalDate">
+        </fieldset>
+        <fieldset class="fieldset">
+            <label for="editConceptsEntry">Concepts Covered</label>
+            <input  type="text" name="editConceptsEntry" id="editConceptsEntry">
+        </fieldset>
+        <fieldset class="fieldset">
+         <label for="editJournalEntry">Journal Entry</label>
+         <input type="text" name="editJournalEntry" id="editJournalEntry">
+     </fieldset>
+     <fieldset>
+          <label class="editJournalMood" name="editJournalMood" for="mood">Mood for the Day:</label>
+                  <select id="editJournalMood">
+                     <option value="happy">happy</option>
+                     <option value="frustrated">frustrated</option>
+                     <option value="confused">confused</option>
+                     <option value="excited">excited</option>
+                     <option value="indifferent">indifferent</option>
+                  </select>
+      </fieldset>
+    </form>
+    <button id="saveEntry">Save Journal Entry</button>
+</section>
       <!--id entry log for placing JS on the DOM-->
       <article id="entryLog" class="entryLog"></article>
-      <div id="deleteButton"></div>
-      <!--delete button-->
-      <div id="editButton"></div>
-      <!--edit button-->
+
       <script type="module" src="script/journal.js"></script>
 
    </body>

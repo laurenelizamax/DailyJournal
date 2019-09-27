@@ -13,15 +13,30 @@ const API = {
             body: JSON.stringify(newEntry)
         })
     },
-    deleteJournalEntries: (id) => {
+    deleteEntries: (id) => {
         return fetch(`http://localhost:3000/entries/${id}`, {
             method: "DELETE"
         }).then(response => response.json())
-    },
-    editJournalEntries: (id) => {
+},
+    editEntries: (id) => {
+        const updatedEntry = {
+            date: document.querySelector("#editJournalDate").value,
+            concepts: document.querySelector("#editConceptsEntry").value,
+            entry: document.querySelector("#editJournalEntry").value,
+            mood: document.querySelector("#editJournalMood").value
+        };
         return fetch(`http://localhost:3000/entries/${id}`, {
-            method: "PATCH"
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(updatedEntry)
         }).then(response => response.json())
+     },
+    getSingleEntry: (id) => {
+        return fetch(`http://localhost:3000/entries/${id}`)
+            .then(response => response.json())
     }
 }
+
 export default API
