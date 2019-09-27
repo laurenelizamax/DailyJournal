@@ -61,8 +61,8 @@ h2 {
   font-size: 15px;
   width: 30%;
 }
-/* body of html*/
-.body_page {
+/* journal Entries Input*/
+#journalEntryInput {
   display: flex;
   justify-content: center;
 }
@@ -86,7 +86,7 @@ h2 {
   flex-direction: row;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 15px;
+  font-size: 35px;
   width: 30%;
 }
 #editButton {
