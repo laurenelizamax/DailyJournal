@@ -95,13 +95,25 @@ moodArray.forEach(radioButton =>  {
                  });
                 }
             }) 
+            // save button
             document.querySelector("#saveEntry").addEventListener("click", (event) => {
                 const hiddenId = document.querySelector("#editEntriesHidden").value;
-                console.log(hiddenId);
                         API.editEntries(hiddenId).then(() => {
                             document.querySelector("#entryLog").innerHTML = " ";
                         API.getJournalEntries().then(data => {
                             entriesDOM.renderJournalEntries(data)
-                    })
                 })
             })
+        })
+            //search journal input
+            const entryArray = document.querySelector("#entryLog");
+        /* event listener for keypress*/
+ document.querySelector("#searchJournal").addEventListener("keypress",          keyPressEvent => {
+        if (keyPressEvent.charCode === 13) {
+
+        /* when user presses enter, find matching concept */
+       API.getJournalEntries().then(res => res.filter(entry => entry.concepts.includes(keyPressEvent.target.value))).then(res =>
+              entriesDOM.conceptFilter(res)
+       )
+       }
+ })
