@@ -11,7 +11,7 @@
    <h1>Journal</h1>
 
    <body>
-      <div id="journalEntryInput">
+      <div id="journalEntryInput" class="img">
          <form class="flex-form" id="formSet" action="">
             <fieldset>
                <h2>
@@ -23,14 +23,14 @@
                <h2>
                   <!--journal entry concepts covered-->
                   <label class="journalConcepts" for="journalConcepts">Concepts Covered:</label>
-                  <input type="text" name="journalConcepts" id="journalConcepts">
+                  <input type="text" placeholder="Enter Concepts" name="journalConcepts" id="journalConcepts">
                </h2>
             </fieldset>
             <fieldset>
                <h2>
                   <!--journal entry content-->
                   <label class="journalEntry" for="journalEntry">Journal Entry:</label>
-                  <input id="journalEntry"></h2>
+                  <input type="text" placeholder="Enter Entry" id="journalEntry"></h2>
             </fieldset>
             <fieldset>
                <h2>
@@ -81,26 +81,36 @@
             </div>
          </fieldset>
          </form>
+         <!-- journal search input field -->
+         <div id="journalSearch">
+               <label for="searchJournal">Search Journal</label>
+               <input type="text"placeholder="Search Your Journal" id="searchJournal"/>
+               <element onkeypress="journalSearch">
+         </div>
+         <!-- button to refresh the page-->
+         <div id="refreshDiv">
+            <button value="Refresh Page" onClick="window.location.reload();">Refresh The Page</button>
+         </div>
 
      <!--Edit form for journal entries - hidden -->
 
 <section id="entryForm">
     <form>
-         <input type="hidden" name="editEntriesHidden" id="editEntriesHidden">
+         <input type="hidden" name="EntriesHidden" id="editEntriesHidden">
         <fieldset class="fieldset">
-            <label for="editJournalDate">Date Of Entry:</label>
-            <input type="date" name="editJournalDate" id="editJournalDate">
+            <label for="date">Date Of Entry:</label>
+            <input type="date" name="JournalDate" id="editJournalDate">
         </fieldset>
-        <fieldset class="fieldset">
-            <label for="editConceptsEntry">Concepts Covered</label>
-            <input  type="text" name="editConceptsEntry" id="editConceptsEntry">
+        <fieldset id="fieldset">
+            <label for="concepts">Concepts Covered</label>
+            <input  type="text" name="ConceptsEntry" placeholder="Enter Concepts" id="editConceptsEntry">
         </fieldset>
-        <fieldset class="fieldset">
-         <label for="editJournalEntry">Journal Entry</label>
-         <input type="text" name="editJournalEntry" id="editJournalEntry">
+        <fieldset id="fieldset">
+         <label for="entry">Journal Entry</label>
+         <input type="text" name="JournalEntry" placeholder="Enter Entry" id="editJournalEntry">
      </fieldset>
      <fieldset>
-          <label class="editJournalMood" name="editJournalMood" for="mood">Mood for the Day:</label>
+          <label  name="JournalMood" for="mood">Mood for the Day:</label>
                   <select id="editJournalMood">
                      <option value="happy">happy</option>
                      <option value="frustrated">frustrated</option>

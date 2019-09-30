@@ -18,6 +18,15 @@ moodFilter: (entries, mood)  => { // entries is the parameter; mood defined in t
         entryLog.innerHTML += makeJournal(entry);
         }
       });
+},
+conceptFilter: (entries, concept)  => { // entries is the parameter; mood defined in the API 
+  let entryLog = document.querySelector(".entryLog");
+  entryLog.innerHTML = ""; // setting it to an empty string
+  entries.forEach(entry => { // going through all the entries and for each loop there is one entry
+      if (entry.concept=== concept) { //checking to see if the mood matches the mood selected; if not move to the next mood.
+      entryLog.innerHTML += makeJournal(entry);
+      }
+    });
 }
 }
 
