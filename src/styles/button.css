@@ -12,6 +12,67 @@
     padding: 10px 5px;
     min-width: 260px;
   }
+
+  #saveEntry {
+    text-decoration: none;
+    background-color: var(--dark-red);
+    color: black;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 5px;
+    max-width: 100px;
+    max-height: 80px;
+  }
+
+  /* add entry button */
+#buttonAddEntry {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  width: 30%;
+}
+#deleteButton {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 35px;
+  width: 30%;
+}
+#editButton {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  width: 30%;
+}
+#refreshDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: white rounded 2px;
+  border-radius: 25px;
+  padding:20px;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: lighter;
+  background-color: white;
+  opacity: 0.8;
+  width: auto;
+  height: auto;
+  margin-bottom: 30px;
+  margin-left: 200px;
+}
+#refreshBtn {
+  background-color: var(--dark-red);
+}
 /* 
 .btn--orange {
     border-color: var(--dark-red);

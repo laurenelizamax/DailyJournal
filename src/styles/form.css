@@ -1,0 +1,51 @@
+#moodFilterForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: white rounded 2px;
+    border-radius: 20px;
+    padding:10px;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    background-color: white;
+    opacity: 0.8;
+    width: 70%;
+    height: auto;
+    margin-bottom: 30px;
+    margin-left: 200px;
+  }
+ #journalSearch {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: white rounded 2px;
+    border-radius: 20px;
+    padding:20px;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    background-color: white;
+    opacity: 0.8;
+    width: 40%;
+    height: auto;
+    margin-left: 200px;
+    margin-bottom: 30px;
+ }
+ #entryForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: white rounded 2px;
+    border-radius: 20px;
+    padding:20px;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    background-color: white;
+    opacity: 0.8;
+    width: 40%;
+    height: auto;
+    margin-bottom: 30px;
+    margin-left: 200px;
+ }
